@@ -3,6 +3,7 @@
   backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
+  z-index: 10
 }
 
 .navbar {
@@ -35,7 +36,7 @@
         left: 0;
       }
     }
-    @media screen and (max-width: 990px) {
+    @media screen and (max-width: 991px) {
       display: none;
     }
   }
@@ -60,7 +61,7 @@
     }
 
     &_mob-hidden {
-      @media screen and (max-width: 990px) {
+      @media screen and (max-width: 991px) {
         display: none;
       }
     }
@@ -69,7 +70,7 @@
   &__menu {
     cursor: pointer;
     display: none;
-    @media screen and (max-width: 990px) {
+    @media screen and (max-width: 991px) {
       display: block;
     }
   }
@@ -77,6 +78,8 @@
   &__content {
     background: #fff;
     width: 100%;
+    height: 100vh;
+    overflow: auto;
     padding: 16px 24px;
     position: fixed;
     top: 0;

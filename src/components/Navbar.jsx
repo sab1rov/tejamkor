@@ -56,7 +56,7 @@ function Navbar() {
   ];
 
   return (
-    <navbar className="navbar-bg">
+    <nav className="navbar-bg">
       <div className="container">
         <div className="navbar">
           <div className="navbar__logo">
@@ -134,7 +134,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-    </navbar>
+    </nav>
   );
 }
 

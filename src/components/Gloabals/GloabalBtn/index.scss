@@ -1,0 +1,16 @@
+@import '../../../styles/mixin.scss', '../../../styles/normmalize.scss',  '../../../styles/varibles.scss';
+
+.main_btn{
+    background: $yellow;
+    border-radius: $borderRadius;
+    border: none;
+    padding: 16px 28px;
+    margin-top: 32px;
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #262626;
+    overflow: hidden;
+}

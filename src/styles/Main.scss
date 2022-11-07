@@ -2,4 +2,6 @@
 
 @import "./mixin", "./normmalize", "./varibles";
 
-@import "./Navbar.scss";
+@import "./Navbar.scss", "./Header.scss";
+
+@import "./pageStyles/MainBanner.scss";
