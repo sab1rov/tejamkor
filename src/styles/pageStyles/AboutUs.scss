@@ -1,0 +1,102 @@
+.main-about-us {
+  margin: 76px 0;
+}
+
+.about {
+  &__title {
+    @include flex();
+    gap: 10px;
+    margin-bottom: 32px;
+    h1 {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 700;
+      @include adaptive-value(font-size, 31, 25, 1);
+      @include adaptive-value(line-height, 38, 30, 1);
+      color: $mainColor;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    background: #f5f5f5;
+    border-radius: 26px;
+    padding: 24px;
+    .content__left {
+      grid-column: span 6;
+      &-title {
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: 600;
+        @include adaptive-value(font-size, 25, 20, 1);
+        @include adaptive-value(line-height, 30, 24, 1);
+        @include adaptive-value(margin-bottom, 24, 12, 1);
+        color: $mainColor;
+      }
+      &-desc {
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: $fontWeight;
+        @include adaptive-value(font-size, 20, 16, 1);
+        @include adaptive-value(line-height, 24, 20, 1);
+        color: $smallTextColor;
+      }
+    }
+    .content__right {
+      grid-column: span 6;
+      &-img {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 100%;
+        height: 335px;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          transition: $transition;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+        .player__icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          height: 56px;
+          width: 56px;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          overflow: hidden;
+          background: $yellow;
+          animation-name: ripple;
+          animation-duration: 1.9s;
+          animation-iteration-count: infinite;
+          @keyframes ripple {
+            0% {
+              box-shadow: 0 0 0 0 #fffce6, 0 0 0 0 #fffce6;
+            }
+            80% {
+              box-shadow: 0 0 0 20px hsl(0deg 0% 100% / 0%),
+                0 0 0 40px hsl(0deg 0% 100% / 0%);
+            }
+            100% {
+              box-shadow: 0 0 0 0 hsl(0deg 0% 100% / 0%),
+                0 0 0 0 hsl(0deg 0% 100% / 0%);
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 991px) {
+      .content__left {
+        grid-column: span 12;
+      }
+      .content__right {
+        grid-column: span 12;
+      }
+    }
+  }
+}

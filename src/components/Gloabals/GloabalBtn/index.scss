@@ -1,16 +1,35 @@
-@import '../../../styles/mixin.scss', '../../../styles/normmalize.scss',  '../../../styles/varibles.scss';
+@import "../../../styles/mixin.scss", "../../../styles/normmalize.scss",
+  "../../../styles/varibles.scss";
 
-.main_btn{
-    background: $yellow;
-    border-radius: $borderRadius;
-    border: none;
-    padding: 16px 28px;
-    margin-top: 32px;
-    font-family: $mainFont;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: #262626;
-    overflow: hidden;
+.main_btn {
+  background: $yellow;
+  border-radius: $borderRadius;
+  border: none;
+  padding: 16px 28px;
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #262626;
+}
+.full {
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.about-left{
+  margin-top: 52px;
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}
+.about-right{
+  margin-top: 24px;
+  display: none;
+  @media screen and (max-width: 991px) {
+    display: block;
+    width: 100%;
+  }
 }

@@ -1,10 +1,12 @@
-import React from 'react'
-import './index.scss'
+import React from "react";
+import "./index.scss";
 
-function index() {
+function index({ className }) {
   return (
-    <button className='main_btn'>Ariza qoldirish</button>
-  )
+    <button className={`main_btn ${className !== undefined ? className : ""}`}>
+      Ariza qoldirish
+    </button>
+  );
 }
 
-export default index
+export default index;

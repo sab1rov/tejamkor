@@ -1,0 +1,46 @@
+.main-info {
+  margin: 76px 0;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  margin: 32px 0;
+  &__left {
+    grid-column: span 8;
+    padding: 24px;
+    border-radius: $borderRadius;
+    background: #f5f5f5;
+    &-text {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 600;
+      @include adaptive-value(font-size, 25, 20, 1);
+      @include adaptive-value(line-height, 30, 24, 1);
+      @include adaptive-value(margin-bottom, 24, 12, 1);
+      color: $mainColor;
+    }
+    &-desc {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: $fontWeight;
+      @include adaptive-value(font-size, 20, 16, 1);
+      @include adaptive-value(margin-bottom, 24, 16, 1);
+      color: #454545;
+    }
+    &-content{
+        .content__items{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+  }
+
+  &__right {
+    grid-column: span 4;
+    padding: 24px;
+    border-radius: $borderRadius;
+    background: #f5f5f5;
+  }
+}
