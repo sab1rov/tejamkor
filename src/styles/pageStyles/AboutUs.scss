@@ -65,6 +65,9 @@
           position: absolute;
           top: 50%;
           left: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           height: 56px;
           width: 56px;
           border-radius: 50%;
@@ -74,6 +77,9 @@
           animation-name: ripple;
           animation-duration: 1.9s;
           animation-iteration-count: infinite;
+          svg{
+            margin-left: 4px;
+          }
           @keyframes ripple {
             0% {
               box-shadow: 0 0 0 0 #fffce6, 0 0 0 0 #fffce6;

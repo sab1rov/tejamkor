@@ -38,17 +38,22 @@ function Info() {
                 {contentData.map((item) => {
                   return (
                     <div className="content__item" key={item.id}>
-                      <img src={item.img} alt={item.text} />
-                      <p className="content__item-text">{item.text}</p>
+                      <div className="content__item-img">
+                        <img src={item.img} alt={item.text} />
+                      </div>
+                      <span className="content__item-text">{item.text}</span>
                     </div>
                   );
                 })}
               </div>
               <div className="content__img">
-                <img src={MainImg} alt="main image" />
+                <div className="image">
+                  <img src={MainImg} alt="main image" />
+                </div>
               </div>
             </div>
           </div>
+
           <div className="info__right">
             <div className="info__right-text">
               <h3>Valyuta kurslari</h3>
